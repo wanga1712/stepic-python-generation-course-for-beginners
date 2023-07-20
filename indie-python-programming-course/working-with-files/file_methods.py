@@ -61,3 +61,44 @@
 #
 # n = int(input())
 # create_file_with_numbers(number_name_file)
+
+# Напишите функцию longest_word_in_file,
+# которая принимает имя файла и внутри его содержимого находит самое длинное слово
+# и возвращает его в качестве ответа. В случае,  если есть несколько слов с максимальной длиной,
+# нужно вернуть слово, которое встречается последнее в тексте.
+# При этом слова в тексте отделяются друг от друга пробелами,
+# любые другие знаки пунктуации необходимо исключить.
+# И также учитывайте, что слова в тестах будут как на русском языке, так и на английском.
+# Если бы содержимое файла было таким:
+# He was running, but it was like running through deep water.
+# There were trees all around him,
+# trees which tried to stop him. They reached out with their branches.
+# And it was behind him. It was coming nearer.
+# то ответом было бы слово branches
+# Все возможные знаки пунктуации можно получить из модуля string
+
+
+# def longest_word_in_file(file_name: str):
+#     from string import punctuation
+#
+#     longest_word = ''
+#     with open(file_name, 'r', encoding='utf-8') as file:
+#         contents = file.read()
+#
+#         # Remove all punctuation marks from the string
+#         contents_cleaned = ''.join(char for char in contents if char not in punctuation)
+#
+#         words = contents_cleaned.split()
+#         current_word = ''
+#         for word in words:
+#             # Check if the word is longer or equal to the current longest word
+#             if len(word) >= len(longest_word):
+#                 longest_word = word
+#
+#     return longest_word
+#
+# file_name = 'test.tst'
+# result = longest_word_in_file(file_name)
+# print(result)
+
+
